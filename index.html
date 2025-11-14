@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website with Sidebar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: "Noto Serif Bengali", serif;
+            padding-top: 2.5cm; /* Space for the fixed header */
+            padding-bottom: 50px; /* Space for the footer */
+            display: flex;
+            flex-wrap: nowrap; /* Prevent wrapping */
+        }
+        #header {
+            width: 100%; /* Full width */
+            border: 6px solid #ffd700;
+            text-align: center;
+            color: white;
+            background-color: #6F4E37;
+            padding: 10px;
+            height: 1.80cm;
+            position: fixed; /* Fixed position */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensures it stays above other content */
+        }
+        
+       
+   #sidebar {
+        width: 170px; /* Set width to 1.5 inches for larger screens */
+        background-color: #7B3F00;
+        border: 6px solid #ffd700;
+        color: white;
+        padding: 3px;
+        padding-right: 1px;
+        position: fixed; /* Make sidebar sticky */
+        top: 2.90cm; /* Below the header */
+        bottom: 0; /* Align to the bottom */
+        overflow: auto; /* Allow scrolling if content is too long */
+    }
+
+    #sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #sidebar li {
+        border-bottom: 3px solid #f5f5f5; /* Add bottom border for separation */
+    }
+
+    #sidebar li:first-child {
+        border-top: 3px solid #f5f5f5; /* Add top border for the first item */
+    }
+
+    #sidebar li:last-child {
+        /* No action needed here; just ensuring the last item has the bottom border. */
+    }
+
+    #sidebar a {
+        font-size: 1.5em;
+        color: white;
+        text-decoration: none;
+        display: block; /* Make links block-level to take full width */
+        padding: 10px 0; /* Add vertical padding for better spacing */
+    }
+
+    #sidebar a:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Optional: add hover effect */
+    }
+        #content {
+            padding-left: 20px;
+            top: 2.90cm;
+      
+            border: 5px solid #129123;
+            flex-grow: 1;
+            margin-left: 190px; /* Space for the fixed sidebar */
+            margin-top: 0.4cm; /* Space for fixed header */
+            margin-right: 0.2cm;
+        }
+        
+        table {
+            width: calc(100% - 30px);
+            border-collapse: collapse;
+            margin-bottom: 2.54cm;
+            border: 2px solid lightblue;
+        }
+
+        table th, table td {
+            border: 1px solid lightblue;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .header-row {
+            font-weight: bold;
+            font-size: 18px;
+            background-color: #6F4E37; /* Background color for header row */
+            color: white; /* Text color for header row */
+        }
+
+        .table1-column-header {
+            background-color: #000b77; /* Table 1 column headers color */
+            color: white; /* Text color for Table 1 column headers */
+        }
+
+        .table2-column-header {
+            background-color: #a50000; /* Table 2 column headers color */
+            color: white; /* Text color for Table 2 column headers */
+        }
+
+        .table1-second-row {
+            background-color: #a6f1a6; /* Table 1 second row color */
+            color: black;
+            font-size: 16px;
+        }
+
+        .table1-fourth-row {
+            background-color: #f5f5bc; /* Table 1 fourth row color */
+            color: black; /* Text color for Table 1 fourth row */
+        }
+
+        .table2-second-row {
+            background-color: #f5f5bc; /* Table 2 second row color */
+            color: black;
+            font-size: 16px;
+        }
+
+        .table2-fourth-row {
+            background-color: #a6f1a6; /* Table 2 fourth row color */
+            color: black; /* Text color for Table 2 fourth row */
+        }
+        
+        footer {
+            text-align: center;
+            height: 1cm;
+            border: 5px solid #129123;
+            background-color: #EBDE8F;
+            padding: 1px;
+            position: fixed; /* Fixed position */
+            bottom: 0; /* Align to the bottom */
+            left: 0; /* Align to the left */
+            right: 0; /* Full width */
+        }
+
+        /* Mobile Styles */
+        @media screen and (max-width: 600px) {
+            #sidebar {
+                width: 100%; /* Full width on mobile */
+                max-width: none; /* Remove max width */
+                position: relative; /* Change to relative positioning */
+                top: auto; /* Reset top position */
+                bottom: auto; /* Reset bottom position */
+            }
+            
+            #content {
+                margin-left: 0px; /* Remove left margin on mobile */
+                margin-top: 2.60cm; /* Adjust for fixed header */
+            }
+        }
+    </style>
+    </head>
+
+
+<body>
+    
+    <header>
+        <div id="header">
+        <h1 style="font-size: 2em; margin: 0;">জমির পরিসংখ্যাপত্র এবং তালিকা</h1>
+    </div>
+    
+    
+    <div class="wrapper" style="display: flex; flex-wrap: wrap;">
+    <div id="sidebar">
+        <h2 style="font-size: 1.5em; color: white;">সংযোজক</h2>
+        <ul>
+            <li><a href="index.html">প্রথম পাতা</a></li>
+            <li><a href="hatil.html">মৌজা হাতিল</a></li>
+            <li><a href="page2.html">মৌজা বুলুপাড়া</a></li>
+            <li><a href="page3.html">মৌজা জয়পুরহাট</a></li>
+            <li><a href="page4.html">রেকর্ড সংশোধন</a></li>
+            <li><a href="page5.html">অন্যান্য</a></li>
+        </ul>
+    </div>
+</div>
+      </header>
+        
+        <div id="content">
+            <p>
+            সায়াহ্নে - কায়কোবাদ<br>
+
+হে পান্থ, কোথায় যাও কোন্ দূরদেশে<br>
+কার আশে? সে কি তোমা করিছে আহ্বান?<br>
+সম্মুখে তামসী নিশা রাক্ষসীর বেশে<br>
+শোন না কি চারিদিকে মরণের তান!<br>
+সে তোমারে ওহে পান্থ, হাসিমুখে এসে,<br>
+সে তোমারে ছলে বলে গ্রাসিবে এখনি |<br>
+যেয়োনা একাকী পান্থ, সে দূর বিদেশে,<br>
+ফিরে এসো, ওহে পান্থ, ফিরে এসো তুমি |<br>
+এ ক্ষুদ্র জীবন লয়ে কেন এত আশা?<br>
+জান না কি এ জগত্ নিশার স্বপন?<br>
+মায়া মরীচিকী প্রায় স্নেহ ভালবাসা—<br>
+জীবনের পাছে ওই রয়েছে মরণ<br>
+হে পান্থ হেথায় শুরু আঁধারের স্তর ;<br>
+মৃত্যুর উপর মৃত্যু, মৃত্যু তার পর!<br>
+            
+            
+           
+            </p>
+            
+            <img src="images/image1.png" alt="A beautiful sunset" width="500" height="300" title="Sunset over the mountains" />
+            <img src="images/image2.jpg" alt="A beautiful sunset" width="500" height="300" title="Sunset over the mountains" />
+            
+
+
+
+<h2>Table 1</h2>
+<div class="table-wrap" aria-label="Table 1">
+    <table>
+        <tr>
+            <td class="header-row" colspan="5">Header Row</td>
+        </tr>
+        <tr class="table1-column-header">
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+        </tr>
+        <tr>
+            <td>Row 1-1</td>
+            <td>Row 1-2</td>
+            <td>Row 1-3</td>
+            <td>Row 1-4</td>
+            <td>Row 1-5</td>
+        </tr>
+        <tr class="table1-second-row">
+            <td>Row 2-1</td>
+            <td>Row 2-2</td>
+            <td>Row 2-3</td>
+            <td>Row 2-4</td>
+            <td>Row 2-5</td>
+        </tr>
+        <tr> <!-- Third row -->
+            <td>Row 3-1</td>
+            <td>Row 3-2</td>
+            <td>Row 3-3</td>
+            <td>Row 3-4</td>
+            <td>Row 3-5</td>
+        </tr>
+        <tr class="table1-fourth-row">
+            <td>Row 4-1</td>
+            <td>Row 4-2</td>
+            <td>Row 4-3</td>
+            <td>Row 4-4</td>
+            <td>Row 4-5</td>
+        </tr>
+        <tr><td>Row 5-1</td><td>Row 5-2</td><td>Row 5-3</td><td>Row 5-4</td><td>Row 5-5</td></tr>
+    </table>
+</div>
+
+
+
+<h2>Table 2</h2>
+<div class="table-wrap" aria-label="Table 2">
+    <table>
+        <tr>
+            <td class="header-row" colspan="5">Header Row</td>
+        </tr>
+        <tr class="table2-column-header">
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+        </tr>
+        <tr>
+            <td>Row 1-1</td>
+            <td>Row 1-2</td>
+            <td>Row 1-3</td>
+            <td>Row 1-4</td>
+            <td>Row 1-5</td>
+        </tr>
+        <tr class="table2-second-row">
+            <td>Row 2-1</td>
+            <td>Row 2-2</td>
+            <td>Row 2-3</td>
+            <td>Row 2-4</td>
+            <td>Row 2-5</td>
+        </tr>
+        <tr> <!-- Third row -->
+            <td>Row 3-1</td>
+            <td>Row 3-2</td>
+            <td>Row 3-3</td>
+            <td>Row 3-4</td>
+            <td>Row 3-5</td>
+        </tr>
+        <tr class="table2-fourth-row">
+            <td>Row 4-1</td>
+            <td>Row 4-2</td>
+            <td>Row 4-3</td>
+            <td>Row 4-4</td>
+            <td>Row 4-5</td>
+        </tr>
+        <tr><td>Row 5-1</td>
+            <td>Row 5-2</td>
+            <td>Row 5-3</td>
+            <td>Row 5-4</td>
+            <td>Row 5-5</td>
+            </tr>
+    </table>
+</div>
+
+
+
+
+    <h2>Table 4</h2>
+<div class="table-wrap" aria-label="Table 2">
+    <table>
+        <tr>
+            <td style="font-weight: bold; font-size: 18px; background-color: #6F4E37; color: white;" colspan="5">Header Row</td>
+        </tr>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+        </tr>
+        <tr><td>Row 1-1</td><td>Row 1-2</td><td>Row 1-3</td><td>Row 1-4</td><td>Row 1-5</td></tr>
+        <tr><td>Row 2-1</td><td>Row 2-2</td><td>Row 2-3</td><td>Row 2-4</td><td>Row 2-5</td></tr>
+        <tr><td>Row 3-1</td><td>Row 3-2</td><td>Row 3-3</td><td>Row 3-4</td><td>Row 3-5</td></tr>
+        <tr><td>Row 4-1</td><td>Row 4-2</td><td>Row 4-3</td><td>Row 4-4</td><td>Row 4-5</td></tr>
+        <tr><td>Row 5-1</td><td>Row 5-2</td><td>Row 5-3</td><td>Row 5-4</td><td>Row 5-5</td></tr>
+    </table>
+</div>
+
+
+    
+    
+  <h2>Table 5</h2>
+<div class="table-wrap" aria-label="Table 2">
+    <table>
+        <tr>
+            <td style="font-weight: bold; font-size: 18px; background-color: #6F4E37; color: white;" colspan="5">Header Row</td>
+        </tr>
+        <tr style="background-color: #a50000; color: white; font-size: 16px;">
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+        </tr>
+        <tr><td>Row 1-1</td><td>Row 1-2</td><td>Row 1-3</td><td>Row 1-4</td><td>Row 1-5</td></tr>
+        <tr><td>Row 2-1</td><td>Row 2-2</td><td>Row 2-3</td><td>Row 2-4</td><td>Row 2-5</td></tr>
+        <tr><td>Row 3-1</td><td>Row 3-2</td><td>Row 3-3</td><td>Row 3-4</td><td>Row 3-5</td></tr>
+        <tr><td>Row 4-1</td><td>Row 4-2</td><td>Row 4-3</td><td>Row 4-4</td><td>Row 4-5</td></tr>
+        <tr><td>Row 5-1</td><td>Row 5-2</td><td>Row 5-3</td><td>Row 5-4</td><td>Row 5-5</td></tr>
+    </table>
+</div>
+    
+    
+    
+    
+    </div>
+    
+            
+
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+</body> 
+</html>
+
